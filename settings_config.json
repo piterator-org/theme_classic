@@ -1,0 +1,28 @@
+[
+    {
+      "k": "index_headline",
+      "ty": "str",
+      "psr": "post",
+      "hnt": "首页头条",
+      "plhd": "首页头条的 slug，如 example-slug，不展示头条留空"
+    },
+    {
+      "k": "index_pinned_posts",
+      "ty": "obj",
+      "psr": "postsli",
+      "hnt": "首页置顶文章",
+      "plhd": "首页置顶文章 slug，以 json 列表格式，如 [ \"example-slug-1\", \"example-slug-2\" ]，不展示置顶文章留 []"
+    },
+    {
+      "k": "notice_title",
+      "ty": "str",
+      "hnt": "公告栏标题",
+      "plhd": "如，公告"
+    },
+    {
+      "k": "notice_content",
+      "ty": "str",
+      "hnt": "公告栏内容",
+      "plhd": "如，此博客基于 OIer Space。"
+    }
+]

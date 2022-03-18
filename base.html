@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://static.pisearch.cn/logonew.min.svg">
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-d/jquery/3.5.1/jquery.slim.min.js"></script>
+    <link href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.0/css/bootstrap.min.css" type="text/css"
+        rel="stylesheet">
+    <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-d/font-awesome/5.15.2/css/all.min.css" type="text/css"
+        rel="stylesheet">
+    {% block head %}{% endblock %}
+    <title>{% block title %}{{ blog.name }}{% endblock %}</title>
+    {% block style %}{% endblock %}
+    {% if has_pro_plan %}
+    <style>{{ blog.custom_css }}</style>
+    {% endif %}
+</head>
+
+<body>
+    {% include 'oierspace/blog/themes/pc/theme_classic/component/navbar.html' %}
+    {% block content %}{% endblock %}
+    {% include 'oierspace/blog/themes/pc/theme_classic/component/footer.html' %}
+
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+    {% block script %}{% endblock %}
+</body>
+
+</html>

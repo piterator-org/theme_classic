@@ -1,0 +1,17 @@
+<div class="col-md-4">
+    <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-light rounded">
+            <h4 class="fst-italic">{{ configs.notice_title }}</h4>
+            <p class="mb-0">{{ configs.notice_content }}</p>
+        </div>
+
+        <div class="p-4">
+            <h4 class="fst-italic">归档</h4>
+            <ol class="list-unstyled mb-0">
+                {% for category in categories %}
+                <li><a href="{% url 'blog_category' category.slug %}">{{ category.title }}</a></li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+</div>

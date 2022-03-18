@@ -1,0 +1,34 @@
+{% extends 'oierspace/blog/themes/pc/theme_classic/base.html' %}
+{% block title %}归档 {{ category.title }} - {{ blog.name }}{% endblock %}
+{% block content %}
+<main class="container">
+    <div class="row g-5">
+        <div class="col-md-8">
+            <h3 class="display-5 fst-italic">{{ category.title }}</h3>
+            <div class="mb-1 text-muted">{{ category.intro }}</div>
+            <br>
+            {% for post in posts %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title"><span class="badge rounded-pill bg-primary">{{ category.title }}</span> {{ post.title }}</h5>
+                    <p class="card-text"><small class="text-muted">{{ post.publish_time }}</small></p>
+                    <p class="card-text">{{ post.intro }}</p>
+                    <a href="{% url 'blog_post' post.slug %}" class="btn btn-primary">查看完整文章</a>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <div class="btn-group">
+                    {% if prev_page_show %}
+                    <a class="btn btn-outline-primary" href="{% url 'blog_posts' %}?page={{ prev_page }}">上一页</a>
+                    {% endif %}
+                    {% if next_page_show %}
+                    <a class="btn btn-outline-primary" href="{% url 'blog_posts' %}?page={{ next_page }}">下一页</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% include 'oierspace/blog/themes/pc/theme_classic/component/side.html' %}
+    </div>
+</main>
+{% endblock %}

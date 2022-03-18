@@ -1,0 +1,15 @@
+{% extends 'oierspace/blog/themes/pc/theme_classic/base.html' %}
+{% block title %}{{ blog.name }}{% endblock %}
+{% block content %}
+<main class="container">
+    <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">404</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Not Found</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="{% url 'index' %}" class="btn btn-primary btn-lg px-4 gap-3">返回首页</a>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,20 @@
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="{% url 'index' %}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <span class="fs-4">{{ blog.name }}</span>
+        </a>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="{% url 'index' %}" class="nav-link
+                {% url 'index' as index_url %}
+                {% if request.get_full_path == index_url %}
+                    active
+                {% endif %}" aria-current="page">首页</a></li>
+            <li class="nav-item"><a href="{% url 'blog_posts' %}" class="nav-link
+                {% url 'blog_posts' as blog_posts_url %}
+                {% if request.get_full_path == blog_posts_url %}
+                    active
+                {% endif %}">文章</a></li>
+            <li class="nav-item"><a href="https://oier.space/dashboard/" target="_blank" class="nav-link">控制面板</a></li>
+        </ul>
+    </header>
+</div>
