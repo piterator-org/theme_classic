@@ -14,7 +14,9 @@
                 {% if request.get_full_path == blog_posts_url %}
                     active
                 {% endif %}">文章</a></li>
+            {% if blog.owner == user %}
             <li class="nav-item"><a href="https://oier.space/dashboard/" target="_blank" class="nav-link">控制面板</a></li>
+            {% endif %}
         </ul>
     </header>
 </div>
