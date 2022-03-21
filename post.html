@@ -13,7 +13,7 @@
 <main class="container">
     <div class="row g-5">
         <div class="col-md-8">
-            <h2 class="display-4 fst-italic">{{ post.title }}</h2>
+            <h2 class="display-4 fst-italic title-serif">{{ post.title }}</h2>
             <div class="mb-1 text-muted">
                 {{ post.publish_time }} - 发布于
                 <a href="{% url 'blog_category' post.category.slug %}">{{ post.category.title }}</a>

@@ -5,7 +5,7 @@
     {% if configs.index_headline %}
     <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
-            <h1 class="display-4 fst-italic">{{ configs.index_headline.title }}</h1>
+            <h1 class="display-4 fst-italic title-serif">{{ configs.index_headline.title }}</h1>
             <p class="lead my-3">{{ configs.index_headline.intro }}</p>
             <p class="lead mb-0"><a href="{% url 'blog_post' configs.index_headline.slug %}" class="text-white fw-bold">查看完整文章</a>
             </p>
@@ -19,7 +19,7 @@
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                     <strong class="d-inline-block mb-2 text-primary">{{ post.category.title }}</strong>
-                    <h3 class="mb-0">{{ post.title }}</h3>
+                    <h3 class="mb-0 title-serif">{{ post.title }}</h3>
                     <div class="mb-1 text-muted">{{ post.publish_time }}</div>
                     <p class="card-text mb-auto">{{ post.intro }}</p>
                     <a href="{% url 'blog_post' post.slug %}" class="stretched-link">查看完整文章</a>
