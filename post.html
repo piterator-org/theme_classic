@@ -18,7 +18,7 @@
                 {{ post.publish_time }} - 发布于
                 <a href="{% url 'blog_category' post.category.slug %}">{{ post.category.title }}</a>
                 {% if blog.owner == user %}
-                <a target="_blank" href="https://oier.space/dashboard/post/{{ post.slug }}">编辑</a>
+                - <a target="_blank" href="https://oier.space/dashboard/post/{{ post.slug }}">编辑</a>
                 {% endif %}
             </div>
             <div id="content" class="markdown"></div>
