@@ -48,7 +48,7 @@
             {% if comments %}
             <br>
             {% for comment in comments %}
-            <div class="bg-light p-4 rounded mt-3">
+            <div class="bg-light p-4 rounded mt-3" id="comment-{{ comment.pk }}">
                 <h5 style="display: inline-block">{{ comment.user.username }}</h5>
                 <span class="text-muted">{{ comment.sending_time }}</span>
                 {% if comment.user == user or blog.owner == user %}
@@ -223,6 +223,14 @@
     .markdown blockquote {
         margin-top: .8em;
         margin-bottom: .8em;
+    }
+
+    :not(pre)>code {
+        border-radius: .3em;
+        background-color: #f6dce4;
+        color: #e4456d;
+        padding: .08em .4em .04em .4em;
+        /* box-sizing: border-box; */
     }
 </style>
 {% endblock %}
