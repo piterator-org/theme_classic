@@ -54,7 +54,12 @@
             <br>
             {% for comment in comments %}
             <div class="bg-light p-4 rounded mt-3" id="comment-{{ comment.pk }}">
-                <h5 style="display: inline-block">{{ comment.user.username }}</h5>
+                <h5 style="display: inline-block">
+                    {{ comment.user.username }}
+                    {% if comment.user_badge %}
+                    <span class="badge rounded-pill bg-secondary">{{ comment.user_badge }}</span>
+                    {% endif %}
+                </h5>
                 <span class="text-muted">{{ comment.sending_time }}</span>
                 {% if comment.user == user or blog.owner == user %}
                 <a class="text-muted" href="{% url 'blog_post' post.slug %}?delete={{ comment.pk }}" style="float: right">删除</a>
