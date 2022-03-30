@@ -55,7 +55,7 @@
             {% for comment in comments %}
             <div class="bg-light p-4 rounded mt-3" id="comment-{{ comment.pk }}">
                 <h5 style="display: inline-block">
-                    {{ comment.user.username }}
+                    {{ comment.username_display }}
                     {% if comment.user_badge %}
                     <span class="badge rounded-pill bg-secondary">{{ comment.user_badge }}</span>
                     {% endif %}
