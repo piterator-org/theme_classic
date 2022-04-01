@@ -19,7 +19,7 @@
         }
     </style>
     {% if has_pro_plan %}
-    <style>{{ blog.custom_css }}</style>
+    <style>{{ blog.custom_css|safe }}</style>
     {% endif %}
 </head>
 
@@ -30,6 +30,9 @@
 
     <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
     {% block script %}{% endblock %}
+    {% if has_pro_plan %}
+    <script>{{ blog.custom_js|safe }}</script>
+    {% endif %}
 </body>
 
 </html>
