@@ -20,10 +20,10 @@
             <div class="d-grid gap-2 col-6 mx-auto">
                 <div class="btn-group">
                     {% if prev_page_show %}
-                    <a class="btn btn-outline-primary" href="{% url 'blog_posts' %}?page={{ prev_page }}">上一页</a>
+                    <a class="btn btn-outline-primary" href="?page={{ prev_page }}">上一页</a>
                     {% endif %}
                     {% if next_page_show %}
-                    <a class="btn btn-outline-primary" href="{% url 'blog_posts' %}?page={{ next_page }}">下一页</a>
+                    <a class="btn btn-outline-primary" href="?page={{ next_page }}">下一页</a>
                     {% endif %}
                 </div>
             </div>
