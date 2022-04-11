@@ -17,6 +17,7 @@
             <div class="mb-1 text-muted">
                 {{ post.publish_time }} - 发布于
                 <a href="{% url 'blog_category' post.category.slug %}">{{ post.category.title }}</a>
+                - {{ post.num_visits }} 浏览
                 {% if blog.owner == user %}
                 - <a target="_blank" href="https://oier.space/dashboard/post/{{ post.pk }}">编辑</a>
                 {% endif %}
